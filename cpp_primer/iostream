@@ -1,0 +1,12 @@
+The library defines four IO objects. To handle input, we use an object of type
+istream named cin (pronounced see-in). This object is also referred to as the
+standard input. For output, we use an ostream object named cout (pronounced
+see-out ). This object is also known as the standard output. The library also defines
+two other ostream objects, named cerr and clog (pronounced see-err and see-log,
+respectively). We typically use cerr, referred to as the standard error, for warning
+and error messages and clog
+
+
+cerr(standard error) : for warning, and error messages 
+and clog for general information  ( both are ostream objects) 
+

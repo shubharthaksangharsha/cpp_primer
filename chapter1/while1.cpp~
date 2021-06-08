@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+  i = 0;
+  while(i){
+
+    cout<<i<<endl;
+    
+    i++;
+
+
+  }
+
+  cout<<"hi shubhi";
+
+  return 0;
+
+}

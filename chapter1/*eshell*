@@ -1,0 +1,44 @@
+Welcome to the Emacs shell
+
+~/Desktop/shubhi/C++/chapter1 $ g++ input.cpp
+~/Desktop/shubhi/C++/chapter1 $ ./a.out
+bye
+bye
+hi i am bye
+hi shubhi bye shubhi 
+bye
+bye
+bye
+bye
+shibye
+byesh
+bye
+bye
+exit()
+exit()
+
+~/Desktop/shubhi/C++/chapter1 $ cat input.cpp 
+#include<iostream>
+using namespace std;
+
+int main(){
+
+  string a;
+  while(getline(cin,a)){
+    if(a=="bye"){
+      cout<<a<<endl;
+    }
+  }
+  return 0;
+}
+~/Desktop/shubhi/C++/chapter1 $ ./a.out 
+bye
+bye
+hi bye
+shubhi bye
+bye
+bye
+shubhibye
+bye
+bye
+exit

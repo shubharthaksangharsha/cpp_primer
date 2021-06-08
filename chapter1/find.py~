@@ -1,0 +1,4 @@
+a= str(input("Please enter a string: "))
+if("bye" in a):
+        print(a)
+

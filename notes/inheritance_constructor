@@ -1,0 +1,4 @@
+1-constructor should be there in derrived class also 
+2-but it is responisiblity of derrived constructor to call base class constructor 
+
+

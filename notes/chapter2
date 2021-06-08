@@ -1,0 +1,126 @@
+Data Types:  are fundamental to any program: They tell us what our data mean and what
+operations we can perform on those data.
+
+Primitive Built-in-types : C++ includes arithmetic types and a special type name void.
+arithmetic types:  Built-in types representing boolean values, characters, integers,
+and floating-point numbers.
+
+void : The void type has no associated values and can be used
+in only a few circumstances, most commonly as the return type for functions that do
+not return a value.
+
+Arithmetic Types : 2 Categories : integral types( which includes character and boolean ) and floating types.
+
+TABLE TO REMEMBER :-
+
+TYPE  	 	  Meaning		Minimum Size
+
+bool 		  boolean		NA
+char		  character		8bits
+wchar_t		  wide character	16bits
+char16_t	  Unicode character	16bits
+char32_t	  Unicode character 	32bits
+short 		  short integer		16bits
+int		  integer		16bits
+long		  long integer		32bits
+long long	  long integer		64bits
+float		  single-precision	6-significant digits
+		  floating_point
+double		  double-precision	10significant digits
+		  floating_point
+long double	  extended-precision	10significant digits
+     		  floating_point
+
+The bool type represents the truth values true and false.
+A signed type represents negative or positive numbers (including zero);
+an unsigned type represents only values greater than or equal to zero.
+
+3types of char : char, unsigned char, signed char
+In an unsigned type, all the bits represent the value. For example, an 8-bit
+unsigned char can hold the values from 0 through 255 inclusive.
+The standard does not define how signed types are represented, but does specify
+that the range should be evenly divided between positive and negative values. Hence,
+an 8-bit signed char is guaranteed to be able to hold values from –127 through
+127; most modern machines use representations that allow values from –128 through
+127.
+
+
+Advice: Deciding which Type to Use
+C++, like C, is designed to let programs get close to the hardware when
+necessary. The arithmetic types are defined to cater to the peculiarities of
+various kinds of hardware. Accordingly, the number of arithmetic types in
+C++ can be bewildering. Most programmers can (and should) ignore these
+complexities by restricting the types they use. A few rules of thumb can be
+useful in deciding which type to use:
+• Use an unsigned type when you know that the values cannot be negative.
+• Use int for integer arithmetic. short is usually too small and, in practice,
+long often has the same size as int. If your data values are larger than
+the minimum guaranteed size of an int, then use long long.
+• Do not use plain char or bool in arithmetic expressions. Use them only to
+hold characters or truth values. Computations using char are especially
+problematic because char is signed on some machines and unsigned on
+others. If you need a tiny integer, explicitly specify either signed char or
+unsigned char.
+• Use double for floating-point computations; float usually does not have
+enough precision, and the cost of double-precision calculations versus
+single-precision is negligible. In fact, on some machines, double-precision
+operations are faster than single. The precision offered by long double
+usually is unnecessary and often entails considerable run-time cost.
+
+MOST IMPORTANT PART :-
+
+bool b = 42;            // b is true
+int i = b;              // i has value 1
+i = 3.14;               // i has value 3
+double pi = i;          // pi has value 3.0
+unsigned char c = -1;   // assuming 8-bit chars, c has value 255
+signed char c2 = 256;   // assuming 8-bit chars, the value of c2 is
+undefined
+what happens depends on the range of the values that the types permit:
+• When we assign one of the nonbool arithmetic types to a bool object, the
+result is false if the value is 0 and true otherwise.
+• When we assign a bool to one of the other arithmetic types, the resulting
+value is 1 if the bool is true and 0 if the bool is false.
+• When we assign a floating-point value to an object of integral type, the value is
+truncated. The value that is stored is the part before the decimal point.
+• When we assign an integral value to an object of floating-point type, the
+fractional part is zero. Precision may be lost if the integer has more bits than the
+floating-point object can accommodate.
+• If we assign an out-of-range value to an object of unsigned type, the result is
+the remainder of the value modulo the number of values the target type can
+hold. For example, an 8-bit unsigned char can hold values from 0 through
+255, inclusive. If we assign a value outside this range, the compiler assigns the
+remainder of that value modulo 256. Therefore, assigning –1 to an 8-bit
+unsigned char gives that object the value 255.
+• If we assign an out-of-range value to an object of signed type, the result is
+undefined. The program might appear to work, it might crash, or it might
+produce garbage values.
+
+
+an object is a region of memory that has a type.
+
+
+Initialization is not assignment. Initialization happens when a variable is given
+a value when it is created. Assignment obliterates an object’s current value
+and replaces that value with a new one.
+
+#forms of initialization :-
+  int a(2);
+  int b { 3};
+  int c = {4} ;
+  int d = 5;
+
+
+ When used with variables of built-in type, this form of initialization has one
+important property: The compiler will not let us list initialize variables of built-in type if
+the initializer might lead to the loss of information
+
+
+When we define a variable without an initializer, the variable is default initialized.
+
+The value of an object of built-in type that is not explicitly initialized depends on
+where it is defined. Variables defined outside any function body are initialized to zero.
+With one exception, which we cover in § 6.1.1 (p. 205), variables of built-in type
+defined inside a function are uninitialized. The value of an uninitialized variable of
+built-in type is undefined (§ 2.1.2, p. 36). It is an error to copy or otherwise try to
+access the value of a variable whose value is undefined.

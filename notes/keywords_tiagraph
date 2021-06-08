@@ -1,0 +1,53 @@
+asm	else	new	this
+auto	enum	operator	throw
+bool	explicit	private	true
+break	export	protected	try
+case	extern	public	typedef
+catch	false	register	typeid
+char	float	reinterpret_cast	typename
+class	for	return	union
+const	friend	short	unsigned
+const_cast	goto	signed	using
+continue	if	sizeof	virtual
+default	inline	static	void
+delete	int	static_cast	volatile
+do	long	struct	wchar_t
+double	mutable	switch	while
+dynamic_cast	namespace	template
+
+
+unknown:-
+asm
+const_cast
+dynamic_cast
+enum
+explicit
+export
+mutable
+reinterpret_cast
+static_cast
+typedef
+typeid
+typename
+volatile
+template
+
+
+Trigraphs
+A few characters have an alternative representation, called a trigraph sequence. A trigraph is a three-character sequence that represents a single character and the sequence always starts with two question marks.
+
+Trigraphs are expanded anywhere they appear, including within string literals and character literals, in comments, and in preprocessor directives.
+
+Following are most frequently used trigraph sequences −
+
+Trigraph	Replacement
+??=	#
+??/	\
+??'	^
+??(	[
+??)	]
+??!	|
+??<	{
+??>	}
+??-	~
+All the compilers do not support trigraphs and they are not advised to be used because of their confusing nature.

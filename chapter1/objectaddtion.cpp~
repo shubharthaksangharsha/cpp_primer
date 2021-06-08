@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+class shubhi{
+  int a, b;
+
+  void  shubhi_read(){
+  cin>>a>>b;
+}
+  void shubhi_sum(){
+    cout<<a+b<<endl;
+  }
+
+};
+
+int main(){
+  shubhi obj1, obj2;
+  cin>>obj1;
+  cout<<obj1;
+
+  return 0;
+  
+}

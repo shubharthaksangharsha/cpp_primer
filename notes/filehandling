@@ -1,0 +1,59 @@
+c++ file-inbuilt functions 
+
+getpointer() , putpointer()
+
+inputmode - read   : seekg , tellg 
+outputmode - write  : seekp, tellp
+
+
+ 
+seekg = i/p mode , read from the file, allow get pointer of file to move to some specific position 
+seekg (3, ios :: cur);
+seekg ( 3) // move pointer to white number 3 from the file 
+
+
+tellg = tell the posiiition of file in getpointer file 
+
+seekp() : outputstream 
+tellp(): 
+
+string s;
+cin.getline(s,80) : will let store max 80 character in the string s
+cin.getline(s,80,'+;); +( delimiter ) stop the 
+
+
+
+
+
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(){
+    
+    char s[100];
+    fstream a ;
+    a.open("b.txt",ios :: out);
+    cout << a.tellg();
+    cout<<"Please enter your name ";
+    cin>> s;
+    a<<s;
+    
+    a.seekg(5,ios::end);
+    
+    
+    cout<< a.tellg();
+
+    
+    a.close();
+    
+    
+
+    
+
+    
+    
+    
+    return 1;
+}
