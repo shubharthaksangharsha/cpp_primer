@@ -31,6 +31,21 @@ int main(){
   *pi3=0;
   cout<<*pi;
   cout<<endl<<pi<<endl<<pi2<<endl<<pi3;
+  cout<<endl<<"***********const pointer *************"<<endl;
+  const int *pcomp;
+  int *comp, compvar= 20;
+  const int *computer2 , compvar2=5 ;
+  cout<<endl<<*computer2<<endl<<computer2<<endl<<pcomp<<endl<<*pcomp<<endl;
+  computer2= &compvar2;
+  cout<<*computer2<<endl;
+  
+  compvar = 15;
+
+  cout<<*computer2<<endl<<compvar;
+
+  const int *const action= computer2;
+  
+  
   
   return 0;
   

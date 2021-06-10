@@ -25,9 +25,18 @@ int main(){
   int z, &ri = z;
 z = 5; ri = 10;
 std::cout << z << " " << ri << std::endl;
- int ref = 5 , &testref = ref ;
- ref = 7;
+ const int ref = 5 , &testref = 19 ;
+
  cout << testref;
-   
+
+ double dval = 3.14;
+ const int &rs = dval;
+ 
+
+ cout<<"**********"<<endl<<rs<<endl;
+ const int comp= 5;
+ int &comp1 = comp , &comp2 = comp ;
+ 
+ 
   return 0;
 }
