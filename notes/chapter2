@@ -124,3 +124,25 @@ With one exception, which we cover in § 6.1.1 (p. 205), variables of built-in t
 defined inside a function are uninitialized. The value of an uninitialized variable of
 built-in type is undefined (§ 2.1.2, p. 36). It is an error to copy or otherwise try to
 access the value of a variable whose value is undefined.
+
+
+separate compilation Ability to split a program into multiple separate source
+files.
+
+When we separate a program into multiple files, we need a way to share code
+across those files. For example, code defined in one file may need to use a variable
+defined in another file. As a concrete example, consider std::cout and std::cin.
+These are objects defined somewhere in the standard library, yet our programs can
+use these objects.
+A variable declaration specifies the type and name of a variable. A variable definition
+is a declaration. In addition to specifying the name and type, a definition also allocates
+storage and may provide the variable with an initial value.
+To obtain a declaration that is not also a definition, we add the extern keyword
+and may not provide an explicit initializer:
+extern int i;   // declares but does not define i
+int j;          // declares and defines j
+
+
+extern double pi = 3.1416; // definition
+#IMPORTANT! : It is an error to provide an initializer on an extern inside a function.
+
