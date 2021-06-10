@@ -25,5 +25,9 @@ int main(){
   int z, &ri = z;
 z = 5; ri = 10;
 std::cout << z << " " << ri << std::endl;
+ int ref = 5 , &testref = ref ;
+ ref = 7;
+ cout << testref;
+   
   return 0;
 }
