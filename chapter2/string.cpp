@@ -1,10 +1,8 @@
 #include<iostream>
 int main(){
-  std::  string s;
-  std :: getline(std :: cin,s);
+  std::  string s1,s2;
+  std:: cin >> s1>>s2;
 
-  std :: cout << s;
-  std :: string empty;
-  std::  cout<< empty;
+  std :: cout << s1<<s2<<std :: endl;
   return 0 ;
 }
