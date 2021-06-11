@@ -11,10 +11,10 @@ int main(){
     cout<<line;
   }
   }
-  else if(select=='w'){
+ else if(select=='w'){
   /*program to read one word at a time */
   while(cin>>word){
-    cout<<word;
+    cout<<word<<endl;
   }
   }
   else {
