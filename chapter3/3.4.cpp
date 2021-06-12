@@ -1,42 +1,42 @@
+//modified using teritionary operator and auto 
 #include<iostream>
-using namespace std;
+using std :: cout;
+using std :: cin ;
+using std :: endl;
+using std :: cerr;
+using std:: string;
 int main(){
-  string choice;
+  char choice;
   cout<<"Please enter choice"<<endl<<"For Larger press (L) and for longer press (l) "<<endl;
-  getline(cin,choice);
+  cin>>choice;
+  cin.ignore();
 
   string s1, s2 ;
 
-  getline(cin,s1);
+
+  getline(cin,s1) ;
+
   cout<<"your s1 string : " <<s1<<endl;
   getline(cin,s2);
   cout<<"your s2 string : " <<s2 <<endl;
-  if(choice=="L"){
-  if(s1!=s2){
-    if(s1>s2) {
-      cout << "string which is larger is : " <<s1<<endl;
-    }
-    else{
-      cout<<"string which is larger is : " <<s2<<endl;
-    }
+  auto l1 = s1.size() , l2 = s2.size();
+  if(choice=='L'){
+  if(s1==s2){
+    cout<<"Both strings are equal"<<endl;
   }
-  else{
-    cout<<"Both strings are equal "<<endl ;
+  else {
+    cout<<((s1>s2)? s1 : s2 )<< "is larger "<<endl;
   }
   }
-  else if (choice == "l"){
-    if(s1.size() != s2.size()){
-      if(s2.size()> s1.size()){
-	cout<<"Longer string : "<<s2<<endl;
-      }
-      else {
-	cout<<"Longer string : " << s1<<endl;
-      }
+  else if (choice == 'l'){
+    if(l1==l2) {
+      cout<<"Both strings have same length"<<endl;
     }
     else {
-      cout<<"Both strings have same length" <<endl;
+      cout<<((l1>l2) ? s1 : s2 )<<" is longer. "<<endl;
     }
-  }
+    }	      
+    
   else{
     cerr<<"wrong input!! "<<endl;
     return -1;
