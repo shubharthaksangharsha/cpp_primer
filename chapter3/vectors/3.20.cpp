@@ -25,19 +25,34 @@ int main(){
   if(choice == 'a'){
 
     for(int index = 0 ; index < ivec.size() ; index++) { //let ivec = {1,2,3,4,5}
-      if(ivec[index] < ivec[ivec.size()-1] ){ // for not printing last term sum 
+      if(index!= ivec.size()-1){
       sum=  (ivec[index]+ ivec[index+1]); // sum = 1 + 2 = 3 
       cout<< "Adjacent sum = " <<sum<< endl; // sum = 3 
       sum = 0;  //reset the sum 
+      }
     } 
-    }
   }
-  else if(choice == 'l') {
-    for(int index = 0, last = ivec.size()-1 ; index <ivec.size()  ; index++, last--) 
-    sum = ( ivec[index] + ivec[last] );
-    cout<< "First and last sum = " << sum<< endl;
+
+ else if(choice == 'l') {
+   for(int index = 0, last = ivec.size() ; index < ivec.size(), last > -1  ; index++, last--){
+   
+     if(index == ivec.size()/2 ){
+        cout<< "#Output, First and last sum = " << ivec[index]<< endl;
+	break;
+     }
+     else if ( last-1 == ivec.size()/2 ) {
+        cout<< "#Output, First and last sum = " << ivec[last-1]+ivec[index]<< endl;
+       
+       break;
+     }
+     
+     sum = ( ivec[index] + ivec[last-1] );
+             cout<< "#Output, First and last sum = " << sum<< endl;
+   
     sum =0;
-  }
+        
+   }
+ }
 
   return 0 ; 
 }
