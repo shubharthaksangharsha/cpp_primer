@@ -34,25 +34,16 @@ int main(){
   }
 
  else if(choice == 'l') {
-   for(int index = 0, last = ivec.size() ; index < ivec.size(), last > -1  ; index++, last--){
-   
-     if(index == ivec.size()/2 ){
-        cout<< "#Output, First and last sum = " << ivec[index]<< endl;
-	break;
-     }
-     else if ( last-1 == ivec.size()/2 ) {
-        cout<< "#Output, First and last sum = " << ivec[last-1]+ivec[index]<< endl;
-       
-       break;
-     }
-     
-     sum = ( ivec[index] + ivec[last-1] );
-             cout<< "#Output, First and last sum = " << sum<< endl;
-   
-    sum =0;
-        
+   for(int index = 0, last = ivec.size()-1 ; index <= ivec.size()/2, last>= ivec.size()/2  ; index++, last--){
+     if(index == last ){ //odd case
+       cout<< "First and last sum = " << ivec[index]<< endl;
+       }
+     else if(index != last) {
+     cout<< "First and last sum = " << ivec[index]+ ivec[last]<< endl;
+     } 
    }
  }
+
 
   return 0 ; 
 }
