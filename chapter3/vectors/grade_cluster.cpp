@@ -8,7 +8,7 @@ using std :: vector;
 using std :: string;
 int main(){
   int grades;
-  vector<int> cluster (11,0);
+  vector<int> cluster (11);
 
   while(cin>>grades){
     if(grades<=100){
